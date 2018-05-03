@@ -1,6 +1,6 @@
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { Component } from '@angular/core';
-import { Book } from './shared/book';
+// import { Book } from './shared/book';
 
 @Component({
   selector: 'bm-root',
@@ -11,19 +11,19 @@ import { Book } from './shared/book';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  listOn = true;
-  detailsOn = false;
+  // listOn = true;
+  // detailsOn = false;
 
-  book: Book;
+  // book: Book;
 
-  showList() {
-    this.listOn = true;
-    this.detailsOn = false;
-  }
+  // showList() {
+  //   this.listOn = true;
+  //   this.detailsOn = false;
+  // }
 
-  showDetails(book: Book) {
-    this.listOn = false;
-    this.detailsOn = true;
-    this.book = book;
-  }
+  // showDetails(book: Book) {
+  //   this.listOn = false;
+  //   this.detailsOn = true;
+  //   this.book = book;
+  // }
 }
