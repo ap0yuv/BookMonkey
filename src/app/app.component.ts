@@ -4,10 +4,11 @@ import { Book } from './shared/book';
 
 @Component({
   selector: 'bm-root',
-  template: `
-              <bm-book-list *ngIf="listOn" (showDetailsEvent)="showDetails($event)"></bm-book-list>
-              <bm-book-details *ngIf="detailsOn" [book]="book" (showListEvent)="showList()"></bm-book-details>
-            `
+  // template: `
+  //             <bm-book-list *ngIf="listOn" (showDetailsEvent)="showDetails($event)"></bm-book-list>
+  //             <bm-book-details *ngIf="detailsOn" [book]="book" (showListEvent)="showList()"></bm-book-details>
+  //           `
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
   listOn = true;
