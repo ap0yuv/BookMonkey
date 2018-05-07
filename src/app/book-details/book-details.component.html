@@ -3,8 +3,8 @@
     <img class="ui large image" [src]="book.thumbnails[0].url">
   </div>
   <div class="twelve wide column">
-    <h1 class="ui header">{{ book.title }}</h1>
-    <h3 class="ui header">{{ book.subtitle }}</h3>
+    <h1 class="ui header">{{ book?.title }}</h1>
+    <h3 class="ui header">{{ book?.subtitle }}</h3>
     <div class="ui divider"></div>
     <div class="ui grid">
       <div class="four wide column">
@@ -15,11 +15,11 @@
       </div>
       <div class="four wide column">
         <h4 class="ui header">ISBN</h4>
-        {{ book.isbn }}
+        {{ book?.isbn }}
       </div>
       <div class="four wide column">
         <h4 class="ui header">Erschienen</h4>
-        {{ book.published }}
+        {{ book?.published }}
       </div>
       <div class="four wide column">
         <h4 class="ui header">Rating</h4>
@@ -29,7 +29,7 @@
   </div>
   <div class="sixteen wide column">
     <h3 class="ui header">Beschreibung</h3>
-    {{ book.description }}
+    {{ book?.description }}
   </div>
   <div class="sixteen wide column">
     <div class="ui small images">
@@ -38,4 +38,6 @@
   </div>
 </div>
 
-<!-- <button (click)="showBookList()" class="ui red button">Zurück zur Buchliste</button> -->
+<button (click)="removeBook()" class="ui tiny red labeled icon button">
+    <i class="remove icon"></i>Buch löschen
+</button>

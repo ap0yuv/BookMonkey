@@ -1,7 +1,7 @@
 import { BookStoreService } from './../shared/book-store.service';
 import { Component, OnInit } from '@angular/core';
 
-import { Book, Thumbnail } from '../shared/book';
+import { Book } from '../shared/book';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class BookListComponent implements OnInit {
   constructor(private bs: BookStoreService) { }
 
   ngOnInit() {
-      this.books = this.bs.getAll();
+      this.bs.getAll().subscribe(res => {this.books = res; console.log(res); });
   }
 
   // showDetails(book: Book) {
