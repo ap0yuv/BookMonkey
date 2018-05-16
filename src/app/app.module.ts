@@ -10,6 +10,8 @@ import { BookStoreService } from './shared/book-store.service';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { SearchComponent } from './search/search.component';
+import { BookFormComponent } from './book-form/book-form.component';
+import { DateValueAccessorModule} from 'angular-date-value-accessor';
 
 
 
@@ -20,12 +22,14 @@ import { SearchComponent } from './search/search.component';
     BookListItemComponent,
     BookDetailsComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    BookFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    DateValueAccessorModule
   ],
   providers: [BookStoreService],
   bootstrap: [AppComponent]
